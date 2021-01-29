@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+
+  postgresql:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 123456
+    volumes:
+        - ./:/files
+    ports:
+      - "5432:5432"

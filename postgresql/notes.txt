@@ -1,0 +1,6 @@
+docker-compose exec postgresql psql -c 'create database world;' -U postgres
+docker-compose exec postgresql psql -c '\i files/world.sql' -d world -U postgres
+docker-compose exec postgresql psql -d world -c "create type myenum as enum ('foo', 'bar')" -U postgres
+# docker-compose exec postgresql psql -d world -c "create extension postgis" -U postgres
+
+psql -U postgres -d world
