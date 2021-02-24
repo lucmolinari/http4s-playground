@@ -5,3 +5,4 @@ project/
 target/
 .bloop/
 .DS_Store
+.metals/
